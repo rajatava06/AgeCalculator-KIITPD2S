@@ -7,7 +7,7 @@
 }
 
 body {
-  background: linear-gradient(to right, #ec4949, #2a73e0);
+  background: linear-gradient(to right, #1d0656, #164a07);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -32,7 +32,7 @@ body {
   align-items: center;
   border-radius: 30px;
   margin-bottom: 15px;
-  background: #78c1f3;
+  background: linear-gradient(to right, #1d0656, #30a110);
 }
 
 .input-box input {
