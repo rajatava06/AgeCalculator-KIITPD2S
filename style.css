@@ -7,7 +7,7 @@
 }
 
 body {
-  background: #78c1f3;
+  background: linear-gradient(to right, #ec4949, #2a73e0);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-  background: #ffffff;
+  background: #e6e6e6;
   padding: 25px;
   width: 450px;
   border-radius: 10px;
