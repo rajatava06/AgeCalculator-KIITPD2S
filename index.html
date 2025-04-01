@@ -1,20 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Age Calculator</title>
-    <link rel="stylesheet" href="style.css">
-
- </head>
-<body>
-    
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
     <div class="container">
-        <h2>Age Calculator</h2>
-        <input type="date" id="birthdate">
-        <button onclick="calculateAge()">Calculate Age</button>
-        <p id="result"></p>
+      <h2>AGE Calculator</h2>
+      <div class="input-box">
+        <input type="date" name="ageValue" id="ageValue" />
+        <!-- <img  src="images/arrow-right.png" /> -->
+        <div id="calculateAge">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M5 12l14 0" />
+            <path d="M13 18l6 -6" />
+            <path d="M13 6l6 6" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="output-box">
+        <label>Your Age is </label>
+        <div>
+          <strong id="CurrentAge">0 years 0 Months 0 Days</strong>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-sparkles"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2zm0 -12a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2zm-7 12a6 6 0 0 1 6 -6a6 6 0 0 1 -6 -6a6 6 0 0 1 -6 6a6 6 0 0 1 6 6z"
+            />
+          </svg>
+        </div>
+
+        <label>Your Date of Birth is</label>
+        <div>
+          <strong id="DOB">Monday, January 00, 0000</strong>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-week"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"
+            />
+            <path d="M16 3v4" />
+            <path d="M8 3v4" />
+            <path d="M4 11h16" />
+            <path d="M7 14h.013" />
+            <path d="M10.01 14h.005" />
+            <path d="M13.01 14h.005" />
+            <path d="M16.015 14h.005" />
+            <path d="M13.015 17h.005" />
+            <path d="M7.01 17h.005" />
+            <path d="M10.01 17h.005" />
+          </svg>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2">You Already Lived</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>In Years</td>
+              <td><strong id="InYears">0</strong> Years</td>
+            </tr>
+            <tr>
+              <td>In Months</td>
+              <td><strong id="InMonths">0</strong> Months</td>
+            </tr>
+            <tr>
+              <td>In Weeks</td>
+              <td><strong id="InWeeks">0</strong> Weeks</td>
+            </tr>
+            <tr>
+              <td>In Days</td>
+              <td><strong id="InDays">0</strong> Days</td>
+            </tr>
+            <tr>
+              <td>In Hours</td>
+              <td><strong id="InHours">0</strong> Hours</td>
+            </tr>
+            <tr>
+              <td>In Minutes</td>
+              <td><strong id="InMinutes">0</strong> Minutes</td>
+            </tr>
+            <tr>
+              <td>In Seconds</td>
+              <td><strong id="InSeconds">0</strong> Seconds</td>
+            </tr>
+          </tbody>
+        </table>
+        <div>
+          <strong id="DaysLeft">0</strong> Days Left for your Next Birthday
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-confetti"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M4 5h2" />
+            <path d="M5 4v2" />
+            <path d="M11.5 4l-.5 2" />
+            <path d="M18 5h2" />
+            <path d="M19 4v2" />
+            <path d="M15 9l-1 1" />
+            <path d="M18 13l2 -.5" />
+            <path d="M18 19h2" />
+            <path d="M19 18v2" />
+            <path
+              d="M14 16.518l-6.518 -6.518l-4.39 9.58a1 1 0 0 0 1.329 1.329l9.579 -4.39z"
+            />
+          </svg>
+        </div>
+      </div>
     </div>
-    
-</body>
+  </body>
 </html>

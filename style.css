@@ -1,33 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(to right, #070707, #6a6969);
-    color: white;
+  background: #78c1f3;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .container {
-    background: #000000;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
-    text-align: center;
+  background: #ffffff;
+  padding: 25px;
+  width: 450px;
+  border-radius: 10px;
 }
-input, button {
-    margin-top: 10px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 15px;
 }
-input {
-    width: 200px;
+
+.input-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 30px;
+  margin-bottom: 15px;
+  background: #78c1f3;
 }
-button {
-    background-color: rgb(9, 37, 147);
-    color: white;
-    cursor: pointer;
+
+.input-box input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 15px;
+  font-size: 18px;
+  color: #ffffff;
+  cursor: pointer;
 }
-button:hover {
-    background-color: rgb(4, 6, 41);
+
+.input-box #calculateAge {
+  height: 55px;
+  width: 55px;
+  background: limegreen;
+  border-radius: 30px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.output-box {
+  margin: 15px;
+}
+
+.output-box div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-left: 10%;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.output-box table {
+  width: 100%;
+  padding: 15px 0;
+}
+
+td {
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
 }
